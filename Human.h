@@ -1,3 +1,5 @@
+#ifndef PLAYER_H
+#define PLAYER_H
 #include "Player.h"
 class Human : public Player {
  protected:
@@ -9,3 +11,4 @@ class Human : public Player {
   char makeMove();
   std::string getName();
 };
+#endif
