@@ -1,28 +1,17 @@
 #include "Referee.h"
 Referee::Referee(){}
-int compare(char move1, char move2) {
-  if (move1 == move2) {
-    return 0;
-  } else if ((move1 == 'R' && move2 == 'S') || (move1 == 'S' && move2 == 'P') ||
-             (move1 == 'P' && move2 == 'R')) {
-    return 1;
-  } else {
-    return 2;
-  }
-}
+
 Player* Referee::refGame(Player* player1, Player* player2) {
   char player1_move = player1->makeMove();
   char player2_move = player2->makeMove();
 
-  int result = compare(player1_move, player2_move);
-
-  if (result == 1) {
+    if (player1_move == player2_move) {
+    return nullptr;;
+  } else if ((player1_move == 'R' && player2_move == 'S') || (player1_move == 'S' && player2_move == 'P') ||
+             (player1_move == 'P' && player2_move == 'R')) {
     return player1;
-    // std::cout << player1->getName() << " Wins\n";
-  } else if (result == 2) {
+  } else {
     return player2;
-    // std::cout << player2->getName() << " Wins\n";
   }
-  return nullptr;
-  // std::cout << "It's a Tie.\n";
+
 };
