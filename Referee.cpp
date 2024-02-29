@@ -24,7 +24,5 @@ Player* Referee::refGame(Player* player1, Player* player2) {
   } else if (result == 2) {
     return player2;
     //std::cout << player2->getName() << " Wins\n";
-  } else {
-    std::cout << "Error\n";
   }
 };
