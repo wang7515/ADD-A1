@@ -1,6 +1,7 @@
 #include "Human.h"
 Human::Human(std::string name) : name(name) {}
 Human::Human():Human("Human"){}
+
 char Human::makeMove() {
     char move;
     std::cout << "Enter move: ";
