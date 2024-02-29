@@ -1,5 +1,3 @@
-#ifndef PLAYER_H
-#define PLAYER_H
 #include "Player.h"
 
 class Computer : public Player {
@@ -11,4 +9,3 @@ class Computer : public Player {
   char makeMove();
   std::string getName();
 };
-#endif
