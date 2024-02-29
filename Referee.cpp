@@ -16,11 +16,14 @@ Player* Referee::refGame(Player* player1, Player* player2) {
   int result = compare(player1_move, player2_move);
 
   if (result == 0) {
-    std::cout << "It's a Tie.\n";
+    return nullptr;
+    //std::cout << "It's a Tie.\n";
   } else if (result == 1) {
-    std::cout << player1->getName() << " Wins\n";
-  } else if (result == 3) {
-    std::cout << player2->getName() << " Wins\n";
+    return player1;
+    //std::cout << player1->getName() << " Wins\n";
+  } else if (result == 2) {
+    return player2;
+    //std::cout << player2->getName() << " Wins\n";
   } else {
     std::cout << "Error\n";
   }
