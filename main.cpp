@@ -13,7 +13,6 @@ int main() {
     bool keepPlaying = true;
     char playAgain;
 
-    while (keepPlaying) {
         Player* winner = gameReferee.refGame(&humanPlayer, &computerPlayer);
 
         if (winner != nullptr) {
@@ -21,7 +20,6 @@ int main() {
         } else {
             std::cout << "It's a Tie.\n";
         }
-    }
 
     return 0;
 }

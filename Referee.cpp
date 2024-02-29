@@ -1,4 +1,5 @@
 #include "Referee.h"
+Referee::Referee(){}
 int compare(char move1, char move2) {
   if (move1 == move2) {
     return 0;
